@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>pokenoms</title>
+</head>
+
+<body>
+    <!-- header  -->
+    <header>
+        <h1> Welcome to the pokenoms world </h1>
+
+        <!-- search -->
+        <div class="search">
+            <!-- this div for fitching pokemons based on id -->
+            <div>
+                <p>hom many pokemon do you to display ?</p>
+                <input class="num" min="0" name="num" type="number">
+                <input onclick="getPokes()" type="submit" value="display">
+            </div>
+
+            <!-- this div for sorting  pokemons after fitching  -->
+            <div>
+                <p>sort</p>
+                <input class="sort" type="submit" value="sort">
+            </div>
+
+            <!-- this div for searching by name after fitching  -->
+            <div>
+                <p>search by name local ?</p>
+                <input onkeyup="onclick=getNameLocal()" class="name" type="text">
+
+            </div>
+
+            <!-- this div for searching by name using api  -->
+            <div>
+                <p>search by name api ?</p>
+                <input class="nameAPI" type="text">
+                <input onclick="getNameAPI()" type="submit" value="display">
+            </div>
+        </div>
+        <!-- ./search -->
+
+        <!--numbers  -->
+        <div class="numbers">
+
+            <!-- this div for the number of Seen pokes and you can click on it to fitching them  -->
+            <div>
+                <span onclick="getSeenPokes()" class="seen">seen</span>
+                <span class="seenNum">0</span>
+            </div>
+
+            <!-- this div for the number of Caught pokes and you can click on it to fitching them  -->
+            <div>
+                <span onclick="getCaughtPokes()" class="caught">caught</span>
+                <span class="caughtNum">0</span>
+
+            </div>
+        </div>
+        <!-- ./numbers  -->
+
+    </header>
+
+    <!--./header  -->
+
+    <!-- container -->
+    <!-- this dev for displaying pokes card -->
+    <div class="container">
+
+        <div class="pokes">
+
+        </div>
+
+        <!-- this dev for displaying poke details when click on  card -->
+        <div class="details">
+
+        </div>
+
+    </div>
+    <!-- ./container -->
+
+    <footer>
+
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
