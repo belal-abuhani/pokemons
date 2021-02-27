@@ -27,9 +27,9 @@ app.use(express.static(__dirname + "/public"));
 //     .catch(err => console.log(err));
 
 
-// app.get('/test', (req, res) => {
-//     res.send("test")
-// })
+app.get('/', (req, res) => {
+    console.log("test")
+})
 
 
 app.use('/', Route);
