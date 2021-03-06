@@ -22,16 +22,19 @@ const storData = () => {
 }
 
 let start = 0
-const getPokes = (name) => {
-
-    // // some edges when the user put num
-    // if (num.value <= 0) alert("you should put num ")
-    // if (num.value > 50) alert("its will take some seconds")
-
-    if (pokemonsObj.length > start) {
-        displayPokes(pokemonsObj.slice(start, start + 15))
-        start += 15
+const getPokes = () => {
+    var refr = 0
+    num = Math.floor(Math.random() * 1000)
+    random = pokemonsObj.slice(num, num + 15)
+    displayPokes(random)
+    if (refr != 0) {
+        if (pokemonsObj.length > start) {
+            displayPokes(pokemonsObj.slice(start, start + 15))
+            start += 15
+        }
     }
+
+    refr++
 }
 
 window.addEventListener("scroll", () => {
